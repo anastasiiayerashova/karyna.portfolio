@@ -50,6 +50,7 @@
   flex-direction: row;
   gap: 27px;
   color: var(--white);
+  padding-bottom: 40px;
 }
 
 .about_list li {
@@ -82,4 +83,26 @@
   flex-direction: column;
   gap: 14px;
   max-width: 400px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+}
+
+.tools_item {
+  padding: 32px 30px;
+  border: 3px solid #1e1e1e;
+  border-radius: 10px;
+}
+
+.tools_text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.64;
+  letter-spacing: 0.01em;
+  color: var(--white);
 }

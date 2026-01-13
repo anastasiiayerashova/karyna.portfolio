@@ -43,6 +43,19 @@ const About = () => {
                 </li>
             </ul>
 
+            <ul className={s.tools}>
+                <li className={s.tools_item}>
+                    <div>
+                        <p className={s.tools_text}>Programs:</p>
+                    </div>
+                </li>
+                <li className={s.tools_item}>
+                    <div>
+                        <p className={s.tools_text}>Languages:</p>
+                    </div>
+                </li>
+            </ul>
+
         </section>
     )
  }
