@@ -1,0 +1,51 @@
+.container {
+  padding: 16px 20px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.21979;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.links {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.21101;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.links li {
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+.links li:nth-child(1) {
+  padding: 9px 12px 10px 13px;
+}
+
+.links li:nth-child(2) {
+  padding: 9px 15px 10px 16px;
+}
+
+.links li:nth-child(3) {
+  padding: 9px 20px 10px 20px;
+}
+
+.links li:nth-child(4) {
+  padding: 9px 17px 10px 17px;
+  background-color: var(--orange);
+  color: var(--gray);
+  font-weight: 400;
+}
