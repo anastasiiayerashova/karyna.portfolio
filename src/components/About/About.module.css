@@ -48,6 +48,7 @@
 .about_list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 27px;
   color: var(--white);
   padding-bottom: 40px;
