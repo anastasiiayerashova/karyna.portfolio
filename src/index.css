@@ -81,6 +81,15 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.21979;
+  letter-spacing: 0.04em;
+}
+
 ul,
 ol {
   margin: 0;

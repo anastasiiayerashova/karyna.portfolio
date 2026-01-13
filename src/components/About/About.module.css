@@ -1,0 +1,85 @@
+.container {
+  padding: 80px 20px;
+}
+
+.about_title {
+  padding-left: 80px;
+}
+
+.about_desc {
+  display: flex;
+  gap: 20px;
+  padding: 70px 0 40px 0;
+}
+
+.about_desc_wrap {
+  padding: 60px 64px;
+  border-radius: 10px;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.about_desc_text {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.64;
+  letter-spacing: 0.01em;
+  max-width: 860px;
+}
+
+.germany {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.21101;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-left: auto;
+}
+
+.about_img {
+  max-width: 690px;
+  object-fit: cover;
+}
+
+.about_list {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+  color: var(--white);
+}
+
+.about_list li {
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+.about_list_item_first {
+  padding: 40px 14px 47px 14px;
+}
+
+.about_list_item_second {
+  padding: 40px 14px 112px 14px;
+}
+
+.about_list_title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.64;
+  letter-spacing: 0.01em;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 46px;
+  text-align: center;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 400px;
+}
