@@ -15,6 +15,7 @@
   flex-direction: row;
   gap: 50px;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .title {
@@ -59,4 +60,15 @@
 
 .gallery {
   margin-top: 20px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
