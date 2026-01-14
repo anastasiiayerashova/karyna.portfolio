@@ -4,7 +4,11 @@ import ContactForm from '../ContactForm/ContactForm.jsx'
 const Contact = () => {
     return (
         <section className={s.container}>
-            <h2 className={s.title}>CONTACT</h2>
+            <div className={s.header}>
+                <h2 className={s.title}>CONTACT</h2>
+                <p className={s.form_title}>LET'S GET STARTED</p>
+            </div>
+            
 
             <div className={s.contact}>
                 <div className={s.left_part}>
@@ -31,7 +35,6 @@ const Contact = () => {
                 </div>
 
                 <div className={s.right_part}>
-                    <p className={s.form_title}>LET'S GET STARTED</p>
                     <ContactForm></ContactForm>
                 </div>
 
