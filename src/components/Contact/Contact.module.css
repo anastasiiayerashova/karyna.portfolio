@@ -38,6 +38,7 @@
   flex-direction: column;
   gap: 50px;
   text-align: center;
+  max-height: 490px;
 }
 
 .text_title {
