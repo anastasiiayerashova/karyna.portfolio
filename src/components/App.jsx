@@ -5,6 +5,7 @@ import Hero from './Hero/Hero.jsx'
 import About from './About/About.jsx'
 import Workflow from './Workflow/Workflow.jsx'
 import Projects from './Projects/Projects.jsx'
+import Contact from './Contact/Contact.jsx'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <About></About>
         <Workflow></Workflow>
         <Projects></Projects>
+        <Contact></Contact>
       </main>
     </>
   )
