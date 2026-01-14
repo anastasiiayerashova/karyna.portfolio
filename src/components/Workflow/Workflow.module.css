@@ -1,0 +1,42 @@
+.container {
+  padding: 0 20px 80px 20px;
+}
+
+.title {
+  padding-left: 80px;
+  padding-bottom: 70px;
+}
+
+.content_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.workflow_img {
+  object-fit: cover;
+  max-width: 680px;
+  max-height: 594px;
+}
+
+.text_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text_container {
+  background-color: var(--gray);
+  border-radius: 10px;
+  padding: 40px 30px;
+}
+
+.text_container p {
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.64;
+  letter-spacing: 0.01em;
+}
