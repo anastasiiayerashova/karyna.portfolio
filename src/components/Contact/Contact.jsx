@@ -1,4 +1,5 @@
 import s from './Contact.module.css'
+import ContactForm from '../ContactForm/ContactForm.jsx'
 
 const Contact = () => {
     return (
@@ -28,6 +29,12 @@ const Contact = () => {
                     </div>
 
                 </div>
+
+                <div className={s.right_part}>
+                    <p className={s.form_title}>LET'S GET STARTED</p>
+                    <ContactForm></ContactForm>
+                </div>
+
             </div>
         </section>
     )

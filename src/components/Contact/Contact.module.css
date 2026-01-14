@@ -10,7 +10,8 @@
 .contact {
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  gap: 45px;
+  justify-content: space-around;
 }
 
 .left_part {
@@ -81,4 +82,20 @@
 
 .add_data_item:last-child {
   padding-top: 9px;
+}
+
+.right_part {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.form_title {
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.21979;
+  letter-spacing: 0.04em;
 }
