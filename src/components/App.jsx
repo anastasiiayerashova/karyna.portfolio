@@ -1,11 +1,12 @@
 
 import './App.module.css'
 import Header from './Header/Header.jsx'
-import Hero from './Hero/Hero.jsx'
-import About from './About/About.jsx'
-import Workflow from './Workflow/Workflow.jsx'
-import Projects from './Projects/Projects.jsx'
-import Contact from './Contact/Contact.jsx'
+import HomePage from '../pages/HomePage/HomePage.jsx'
+import AboutPage from '../pages/AboutPage/AboutPage.jsx'
+import WorkflowPage from '../pages/WorkflowPage/WorkflowPage.jsx'
+import ProjectsPage from '../pages/ProjectsPage/ProjectsPage.jsx'
+import ContactPage from '../pages/ContactPage/ContactPage.jsx'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -15,11 +16,11 @@ function App() {
         <Header></Header>
       </header>
       <main>
-        <Hero></Hero>
-        <About></About>
-        <Workflow></Workflow>
-        <Projects></Projects>
-        <Contact></Contact>
+        <HomePage/>
+        <AboutPage/>
+        <WorkflowPage/>
+        <ProjectsPage/>
+        <ContactPage/>
       </main>
     </>
   )
