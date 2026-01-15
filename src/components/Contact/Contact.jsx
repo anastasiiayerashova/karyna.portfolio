@@ -4,12 +4,11 @@ import ContactForm from '../ContactForm/ContactForm.jsx'
 const Contact = () => {
     return (
         <section className={s.container}>
+            <h2 className={s.title}>CONTACT</h2>
             <div className={s.header}>
-                <h2 className={s.title}>CONTACT</h2>
                 <p className={s.form_title}>LET'S GET STARTED</p>
             </div>
             
-
             <div className={s.contact}>
                 <div className={s.left_part}>
                     <div className={s.images}>
