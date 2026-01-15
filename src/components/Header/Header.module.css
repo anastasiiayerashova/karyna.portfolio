@@ -31,6 +31,12 @@
   border-radius: 10px;
 }
 
+.links a,
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .links li:nth-child(1) {
   padding: 9px 12px 10px 13px;
 }

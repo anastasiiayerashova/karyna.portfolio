@@ -1,8 +1,11 @@
-import Projects from "../../components/Projects/Projects.jsx";
+import Projects from "../../components/Projects/Projects.jsx"
+import PageWrapper from "../../components/PageWrapper.jsx"
 
 const ProjectsPage = () => {
     return (
-        <Projects/>
+        <PageWrapper>
+            <Projects/>
+        </PageWrapper>
     )
 }
 

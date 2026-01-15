@@ -1,8 +1,11 @@
-import Contact from "../../components/Contact/Contact.jsx";
+import Contact from "../../components/Contact/Contact.jsx"
+import PageWrapper from "../../components/PageWrapper.jsx"
 
 const ContactPage = () => {
     return (
-        <Contact/>
+        <PageWrapper>
+            <Contact/>
+        </PageWrapper>
     )
 }
 

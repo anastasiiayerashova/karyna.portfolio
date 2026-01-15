@@ -1,8 +1,11 @@
-import Hero from "../../components/Hero/Hero.jsx";
+import Hero from "../../components/Hero/Hero.jsx"
+import PageWrapper from "../../components/PageWrapper.jsx"
 
 const HomePage = () => {
     return (
-        <Hero/>
+        <PageWrapper>
+            <Hero/>
+        </PageWrapper>
     )
 }
 

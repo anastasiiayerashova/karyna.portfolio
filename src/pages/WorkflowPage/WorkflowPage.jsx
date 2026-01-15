@@ -1,8 +1,11 @@
-import Workflow from "../../components/Workflow/Workflow.jsx";
+import Workflow from "../../components/Workflow/Workflow.jsx"
+import PageWrapper from "../../components/PageWrapper.jsx"
 
 const WorkflowPage = () => {
     return (
-        <Workflow/>
+        <PageWrapper>
+            <Workflow/>
+        </PageWrapper>
     )
 }
 

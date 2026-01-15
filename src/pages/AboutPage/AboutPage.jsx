@@ -1,8 +1,11 @@
-import About from "../../components/About/About.jsx";
+import About from "../../components/About/About.jsx"
+import PageWrapper from "../../components/PageWrapper.jsx"
 
 const AboutPage = () => {
     return (
-        <About/>
+        <PageWrapper>
+            <About/>
+        </PageWrapper>
     )
 }
 
