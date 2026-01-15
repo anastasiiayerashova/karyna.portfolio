@@ -35,7 +35,7 @@ const About = () => {
                         Germany</p>
                 </div>
                 <div className={s.about_desc_img_wrap}>
-                    <img width='728' height='680' src='/public/images/about1.png' alt='Karyna Yurkova' className={`${s.about_img} ${loaded ? s.loaded : ''}`} onLoad={() => setLoaded(true)}/>
+                    <img width='728' height='680' src='/images/about1.png' alt='Karyna Yurkova' className={`${s.about_img} ${loaded ? s.loaded : ''}`} onLoad={() => setLoaded(true)}/>
                 </div>
             </div>
 
