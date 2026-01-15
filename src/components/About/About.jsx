@@ -69,16 +69,16 @@ const About = () => {
                         <p className={s.tools_text}>Programs:</p>
                         <ul className={s.icons_list}>
                             <li>
-                                <img alt='' src='/public/icons/Photoshop.svg' />
+                                <img className={s.images} alt='' src='/public/icons/Photoshop.svg' />
                             </li>
                             <li>
-                                <img alt='' src='/public/icons/Figma.svg' />
+                                <img className={s.images} alt='' src='/public/icons/Figma.svg' />
                             </li>
                             <li>
-                                <img alt='' src='/public/icons/Illustrator.svg' />
+                                <img className={s.images} alt='' src='/public/icons/Illustrator.svg' />
                             </li>
                             <li>
-                                <img alt='' src='/public/icons/Behance.svg'/>
+                                <img className={s.images} alt='' src='/public/icons/Behance.svg'/>
                             </li>
                         </ul>
                     </div>
