@@ -1,12 +1,14 @@
 import './App.module.css'
-import HomePage from '../pages/HomePage/HomePage.jsx'
-import AboutPage from '../pages/AboutPage/AboutPage.jsx'
-import WorkflowPage from '../pages/WorkflowPage/WorkflowPage.jsx'
-import ProjectsPage from '../pages/ProjectsPage/ProjectsPage.jsx'
-import ContactPage from '../pages/ContactPage/ContactPage.jsx'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import SharedLayout from './SharedLayout.jsx'
+import { lazy } from 'react'
+
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'))
+const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'))
+const WorkflowPage = lazy(() => import('../pages/WorkflowPage/WorkflowPage'))
+const ProjectsPage = lazy(() => import('../pages/ProjectsPage/ProjectsPage'))
+const ContactPage = lazy(() => import('../pages/ContactPage/ContactPage'))
 
 function App() {
 
