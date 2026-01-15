@@ -1,12 +1,28 @@
 import s from './Contact.module.css'
 import ContactForm from '../ContactForm/ContactForm.jsx'
-import { LuPhone } from "react-icons/lu";
-import { BsGeo } from "react-icons/bs";
+import { LuPhone } from "react-icons/lu"
+import { BsGeo } from "react-icons/bs"
+import { motion } from 'framer-motion'
+
+const fromLeft = {
+  hidden: {
+    opacity: 0,
+    x: -60,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
 
 const Contact = () => {
     return (
         <section className={s.container}>
-            <h2 className={s.title}>CONTACT</h2>
+            <motion.h2 className={s.title} variants={fromLeft} initial='hidden' animate='show'>CONTACT</motion.h2>
             <div className={s.header}>
                 <p className={s.form_title}>LET'S GET STARTED</p>
             </div>

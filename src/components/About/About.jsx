@@ -1,10 +1,27 @@
 import s from './About.module.css'
-import { BsGeo } from "react-icons/bs";
+import { BsGeo } from "react-icons/bs"
+import { motion } from 'framer-motion'
+
+const fromLeft = {
+  hidden: {
+    opacity: 0,
+    x: -60,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
 
 const About = () => {
     return (
         <section className={s.container}>
-            <h2 className={s.about_title}>ABOUT ME</h2>
+            <motion.h2 className={s.about_title} variants={fromLeft} initial='hidden' animate='show'>ABOUT ME</motion.h2>
 
             <div className={s.about_desc}>
                 <div className={s.about_desc_wrap}>

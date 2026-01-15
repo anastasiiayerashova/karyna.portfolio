@@ -6,21 +6,36 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.2,
     },
   },
 };
 
-const item = {
+const fromLeft = {
   hidden: {
     opacity: 0,
-    y: 20,
+    x: -60,
   },
   show: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const fromRight = {
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
       ease: 'easeOut',
     },
   },
@@ -33,13 +48,13 @@ const Hero = () => {
             <div className={s.hero_container}>
 
                 <motion.div className={s.hero_content_wrap} variants={container} initial='hidden' animate='show'>
-                <motion.div className={s.hero_content} variants={item}>
-                    <motion.p className={s.hero_name} variants={item}>Karyna<span className={s.hero_secondname}>Yurkova</span></motion.p>
-                    <motion.p className={s.hero_description} variants={item}>I design modern interfaces where aesthetics meet functionality, turning ideas into reality.</motion.p>
+                <motion.div className={s.hero_content} variants={fromLeft}>
+                    <motion.p className={s.hero_name} variants={fromLeft}>Karyna<span className={s.hero_secondname}>Yurkova</span></motion.p>
+                    <motion.p className={s.hero_description} variants={fromLeft}>I design modern interfaces where aesthetics meet functionality, turning ideas into reality.</motion.p>
                 </motion.div>
 
-                <motion.div className={s.hero_left} variants={item}>
-                    <motion.p className={s.hero_left_title} variants={item}>Design & Vision</motion.p>
+                <motion.div className={s.hero_left} variants={fromRight}>
+                    <motion.p className={s.hero_left_title} variants={fromRight}>Design & Vision</motion.p>
                         <Link to='/about' className={s.hero_left_link}>
                             <img src="/public/icons/circle-arrow-down.svg" alt="Link" />
                             LEARN MORE
