@@ -1,4 +1,5 @@
 import s from './Hero.module.css'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -13,10 +14,10 @@ const Hero = () => {
 
                 <div className={s.hero_left}>
                     <p className={s.hero_left_title}>Design & Vision</p>
-                        <a href="#" className={s.hero_left_link}>
+                        <Link to='/about' className={s.hero_left_link}>
                             <img src="/public/icons/circle-arrow-down.svg" alt="" />
                             LEARN MORE
-                        </a>
+                        </Link>
                 </div>                    
                 </div>
 
