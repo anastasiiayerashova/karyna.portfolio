@@ -1,6 +1,7 @@
 import s from './Hero.module.css'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import arrowIcon from '/public/icons/circle-arrow-down.svg'
 
 const container = {
   hidden: {},
@@ -56,7 +57,7 @@ const Hero = () => {
                 <motion.div className={s.hero_left} variants={fromRight}>
                     <motion.p className={s.hero_left_title} variants={fromRight}>Design & Vision</motion.p>
                         <Link to='/about' className={s.hero_left_link}>
-                            <img src="/public/icons/circle-arrow-down.svg" alt="Link" />
+                            <img src={arrowIcon} alt="Link" />
                             LEARN MORE
                         </Link>
                 </motion.div>                    
