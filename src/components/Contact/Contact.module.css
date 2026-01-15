@@ -75,6 +75,9 @@
   letter-spacing: 0.01em;
   color: var(--white);
   font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 20px; */
 }
 
 .add_data {
@@ -90,6 +93,10 @@
   line-height: 1.21101;
   letter-spacing: 0.04em;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .add_data_item:last-child {
