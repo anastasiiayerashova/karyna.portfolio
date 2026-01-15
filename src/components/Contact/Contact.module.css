@@ -1,33 +1,55 @@
 .container {
-  padding: 80px 20px;
-  display: grid;
-  grid-template-columns: 1fr 690px; /* левая часть + ширина формы */
-}
-
-.header {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 690px;
-  align-items: end;
-}
-
-.title {
-  grid-column: 1 / 2;
-  padding-left: 80px;
-  padding-bottom: 54px;
-}
-
-.contact {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 690px;
-  gap: 45px;
-}
-
-.left_part {
+  padding: 40px 20px;
   display: flex;
-  flex-direction: row;
-  gap: 70px;
+  flex-direction: column;
+}
+
+/* TITLE */
+.title {
+  font-size: 28px;
+  padding-bottom: 24px;
+}
+
+/* CONTACT WRAPPER */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* LEFT PART — ПЕРВЫЙ */
+.left_part {
+  order: 1;
+  display: flex;
+
+  gap: 24px;
+}
+
+/* HEADER (LET'S GET STARTED) — ВТОРОЙ */
+.header {
+  order: 2;
+  margin-bottom: 0;
+}
+
+/* .form_title {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+} */
+
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* FORM — ТРЕТИЙ */
+.right_part {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .images {
@@ -108,15 +130,163 @@
   justify-content: center;
 }
 
-.form_title {
+.form_title_mob {
   grid-column: 2 / 3;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 20px;
   line-height: 1.21979;
   letter-spacing: 0.04em;
+}
+
+@media screen and (min-width: 1280px) {
+  .visually_hidden {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .form_title_mob {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .container {
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: 1fr 690px; /* левая часть + ширина формы */
+  }
+
+  .header {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 690px;
+    align-items: end;
+    order: unset;
+  }
+
+  .title {
+    grid-column: 1 / 2;
+    padding-left: 80px;
+    padding-bottom: 54px;
+    font-size: 80px;
+  }
+
+  .contact {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 690px;
+    gap: 45px;
+  }
+
+  .left_part {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-left: 60px;
+  }
+
+  .images img {
+    max-width: 212px;
+  }
+
+  .text_wrap {
+    border-radius: 10px;
+    background-color: var(--gray);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    max-height: 490px;
+  }
+
+  .text_title {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.22156;
+    letter-spacing: 0.04em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list_item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.64;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+  }
+
+  .add_data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add_data_item {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.21101;
+    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add_data_item:last-child {
+    padding-top: 9px;
+  }
+
+  .right_part {
+    display: flex;
+    flex-direction: unset;
+    justify-content: center;
+  }
+
+  .form_title {
+    grid-column: 2 / 3;
+    text-align: center;
+    margin-bottom: 60px;
+
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.21979;
+    letter-spacing: 0.04em;
+  }
 }

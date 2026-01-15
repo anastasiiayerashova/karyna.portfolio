@@ -24,7 +24,7 @@ const Contact = () => {
         <section className={s.container}>
             <motion.h2 className={s.title} variants={fromLeft} initial='hidden' animate='show'>CONTACT</motion.h2>
             <div className={s.header}>
-                <p className={s.form_title}>LET'S GET STARTED</p>
+                <p className={`${s.form_title} visually_hidden`}>LET'S GET STARTED</p>
             </div>
             
             <div className={s.contact}>
@@ -66,6 +66,7 @@ const Contact = () => {
                 </div>
 
                 <div className={s.right_part}>
+                    <p className={`${s.form_title_mob} visually_hidden`}>LET'S GET STARTED</p>
                     <ContactForm></ContactForm>
                 </div>
 
