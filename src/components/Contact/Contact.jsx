@@ -30,24 +30,24 @@ const Contact = () => {
             <div className={s.contact}>
                 <div className={s.left_part}>
                     <div className={s.images}>
-                        <img alt='Telegram' src='/public/images/contact1.png'/>
-                        <img alt='Instagram' src='/public/images/contact2.png'/>
+                        <img alt='Telegram' src='/images/contact1.png'/>
+                        <img alt='Instagram' src='/images/contact2.png'/>
                     </div>
 
                     <div className={s.text_wrap}>
                         <p className={s.text_title}>Subscribe To<br/> My Social Media</p>
                         <ul className={s.list}>
                             <li className={s.list_item}>Instagram account:
-                                <img alt='' src='/public/icons/instagram.svg'/>
+                                <img alt='Instagram' src='/icons/instagram.svg'/>
                             </li>
                             <li className={s.list_item}>Telegram account:
-                                <img alt='' src='/public/icons/telegram.svg'/>
+                                <img alt='Telegram' src='/icons/telegram.svg'/>
                             </li>
                             <li className={s.list_item}>Behance account:
-                                <img alt='' src='/public/icons/behance (1).svg'/>
+                                <img alt='Behance' src='/icons/behance (1).svg'/>
                             </li>
                             <li className={s.list_item}>WhatsApp account:
-                                <img alt='' src='/public/icons/whatsapp.svg'/>
+                                <img alt='Whatsapp' src='/icons/whatsapp.svg'/>
                             </li>
                         </ul>
                         <ul className={s.add_data}>
@@ -55,7 +55,7 @@ const Contact = () => {
                                 <LuPhone/>
                                 +380661830828</li>
                             <li className={s.add_data_item}>
-                                <img src='/public/icons/gmail.svg' alt=''/>
+                                <img src='/icons/gmail.svg' alt=''/>
                                 designfernis1@gmail.com</li>
                             <li className={s.add_data_item}>
                                 <BsGeo color='red'/>
