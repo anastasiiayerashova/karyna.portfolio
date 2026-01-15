@@ -17,7 +17,14 @@
 }
 
 .workflow_img {
+  display: block;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.workflow_img.loaded {
+  opacity: 1;
 }
 
 .text_wrap {

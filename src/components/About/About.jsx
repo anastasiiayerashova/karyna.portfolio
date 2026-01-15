@@ -1,6 +1,7 @@
 import s from './About.module.css'
 import { BsGeo } from "react-icons/bs"
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const fromLeft = {
   hidden: {
@@ -19,6 +20,9 @@ const fromLeft = {
 
 
 const About = () => {
+
+    const [loaded, setLoaded] = useState(false)
+
     return (
         <section className={s.container}>
             <motion.h2 className={s.about_title} variants={fromLeft} initial='hidden' animate='show'>ABOUT ME</motion.h2>
@@ -31,7 +35,7 @@ const About = () => {
                         Germany</p>
                 </div>
                 <div className={s.about_desc_img_wrap}>
-                    <img src='/public/images/about1.png' alt='Karyna Yurkova' className={s.about_img}/>
+                    <img width='728' height='680' src='/public/images/about1.png' alt='Karyna Yurkova' className={`${s.about_img} ${loaded ? s.loaded : ''}`} onLoad={() => setLoaded(true)}/>
                 </div>
             </div>
 

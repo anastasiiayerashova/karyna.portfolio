@@ -1,5 +1,6 @@
 import s from './Workflow.module.css'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const fromLeft = {
   hidden: {
@@ -17,13 +18,16 @@ const fromLeft = {
 };
 
 const Workflow = () => {
+
+    const [loaded, setLoaded] = useState(false)
+
     return (
         <section className={s.container}>
             <motion.h2 className={s.title} variants={fromLeft} initial='hidden' animate='show'>Workflow</motion.h2>
 
             <div className={s.content_wrap}>
                 <div className={s.img_wrap}>
-                    <img src='/public/images/workflow1.png' alt='Karyna Yurkova' className={s.workflow_img}/>
+                    <img width='720' height='690' src='/public/images/workflow1.png' alt='Karyna Yurkova' onLoad={() => setLoaded(true)} className={`${s.workflow_img} ${loaded ? s.loaded : ''}`}/>
                 </div>
                 <div className={s.text_wrap}>
                     <div className={s.text_container}>
