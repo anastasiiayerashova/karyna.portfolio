@@ -4,38 +4,27 @@
   flex-direction: column;
 }
 
-/* TITLE */
 .title {
   font-size: 28px;
-  padding-bottom: 24px;
+  padding-bottom: 70px;
 }
 
-/* CONTACT WRAPPER */
 .contact {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-/* LEFT PART — ПЕРВЫЙ */
 .left_part {
   order: 1;
   display: flex;
-
   gap: 24px;
 }
 
-/* HEADER (LET'S GET STARTED) — ВТОРОЙ */
 .header {
   order: 2;
   margin-bottom: 0;
 }
-
-/* .form_title {
-  text-align: center;
-  font-size: 20px;
-  margin: 0;
-} */
 
 .visually_hidden {
   position: absolute;
@@ -44,12 +33,12 @@
   overflow: hidden;
 }
 
-/* FORM — ТРЕТИЙ */
 .right_part {
   order: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .images {
@@ -99,7 +88,6 @@
   font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: space-between;
-  /* gap: 20px; */
 }
 
 .add_data {
@@ -125,16 +113,10 @@
   padding-top: 9px;
 }
 
-.right_part {
-  display: flex;
-  justify-content: center;
-}
-
 .form_title_mob {
   grid-column: 2 / 3;
   text-align: center;
   margin-bottom: 20px;
-
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -167,7 +149,7 @@
   .container {
     padding: 80px 20px;
     display: grid;
-    grid-template-columns: 1fr 690px; /* левая часть + ширина формы */
+    grid-template-columns: 1fr 690px;
   }
 
   .header {
@@ -190,6 +172,7 @@
     display: grid;
     grid-template-columns: 1fr 690px;
     gap: 45px;
+    align-items: center;
   }
 
   .left_part {
@@ -245,7 +228,6 @@
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: space-between;
-    /* gap: 20px; */
   }
 
   .add_data {
@@ -275,13 +257,13 @@
     display: flex;
     flex-direction: unset;
     justify-content: center;
+    align-items: unset;
   }
 
   .form_title {
     grid-column: 2 / 3;
     text-align: center;
     margin-bottom: 60px;
-
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
