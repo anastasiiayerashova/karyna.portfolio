@@ -27,7 +27,7 @@ const Workflow = () => {
 
             <div className={s.content_wrap}>
                 <div className={s.img_wrap}>
-                    <img width='720' height='690' src='/public/images/workflow1.png' alt='Karyna Yurkova' onLoad={() => setLoaded(true)} className={`${s.workflow_img} ${loaded ? s.loaded : ''}`}/>
+                    <img width='720' height='690' src='/images/workflow1.png' alt='Karyna Yurkova' onLoad={() => setLoaded(true)} className={`${s.workflow_img} ${loaded ? s.loaded : ''}`}/>
                 </div>
                 <div className={s.text_wrap}>
                     <div className={s.text_container}>
