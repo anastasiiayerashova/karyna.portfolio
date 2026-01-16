@@ -4,6 +4,29 @@ import { motion } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
+const listVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+}
 
 const fromLeft = {
   hidden: {
@@ -54,28 +77,28 @@ const About = () => {
             <ul className={s.about_list}>
                 <li className={s.about_list_item_first}>
                     <h3 className={s.about_list_title}>UX/UI & Web Design:</h3>
-                    <ul className={s.list}>
-                        <li>User experience (UX) design</li>
-                        <li>Wireframing and prototyping</li>
-                        <li>Responsive interface development</li>
-                        <li>Working with grids, typography, and color schemes</li>
-                        <li>User research and scenario analysis</li>
-                    </ul>
+                    <motion.ul className={s.list} variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+                        <motion.li variants={itemVariants}>User experience (UX) design</motion.li>
+                        <motion.li variants={itemVariants}>Wireframing and prototyping</motion.li>
+                        <motion.li variants={itemVariants}>Responsive interface development</motion.li>
+                        <motion.li variants={itemVariants}>Working with grids, typography, and color schemes</motion.li>
+                        <motion.li variants={itemVariants}>User research and scenario analysis</motion.li>
+                    </motion.ul>
                 </li>
                 <li className={s.about_list_item_second}>
                     <h3 className={s.about_list_title}>Tools:</h3>
-                    <ul className={s.list}>
-                        <li>Figma – prototypes, UI components, design systems</li>
-                        <li>Adobe Photoshop / Illustrator – graphics, retouching, vector elements</li>
-                    </ul>                    
+                    <motion.ul className={s.list} variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+                        <motion.li variants={itemVariants}>Figma – prototypes, UI components, design systems</motion.li>
+                        <motion.li variants={itemVariants}>Adobe Photoshop / Illustrator – graphics, retouching, vector elements</motion.li>
+                    </motion.ul>                    
                 </li>
                 <li className={s.about_list_item_second}>
                     <h3 className={s.about_list_title}>Additional Skills:</h3>
-                    <ul className={s.list}>
-                        <li>Brand concept development</li>
-                        <li>Typography, color, and composition</li>
-                        <li>Experience creating landing pages and multi-page websites</li>
-                    </ul>                       
+                    <motion.ul className={s.list} variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+                        <motion.li variants={itemVariants}>Brand concept development</motion.li>
+                        <motion.li variants={itemVariants}>Typography, color, and composition</motion.li>
+                        <motion.li variants={itemVariants}>Experience creating landing pages and multi-page websites</motion.li>
+                    </motion.ul>                       
                 </li>
             </ul>
 
