@@ -1,7 +1,9 @@
 import s from './About.module.css'
 import { BsGeo } from "react-icons/bs"
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+
 
 const fromLeft = {
   hidden: {
@@ -22,6 +24,16 @@ const fromLeft = {
 const About = () => {
 
     const [loaded, setLoaded] = useState(false)
+    const textRef = useRef(null)
+
+  useEffect(() => {
+    gsap.from(textRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+    })
+  }, [])
 
     return (
         <section className={s.container}>
@@ -29,7 +41,7 @@ const About = () => {
 
             <div className={s.about_desc}>
                 <div className={s.about_desc_wrap}>
-                    <p className={s.about_desc_text}>I am Karyna, beginning my journey in web design and UX/UI. I am inspired by creativity and the desire to craft aesthetic, user-friendly, and modern interfaces. I strive to grow as a designer, improving my skills in visual design, UX analysis, and contemporary UI solutions. My goal is not just to make a website look beautiful but to create a convenient, intuitive, and effective product for users.</p>
+                    <p ref={textRef} className={s.about_desc_text}>I am Karyna, beginning my journey in web design and UX/UI. I am inspired by creativity and the desire to craft aesthetic, user-friendly, and modern interfaces. I strive to grow as a designer, improving my skills in visual design, UX analysis, and contemporary UI solutions. My goal is not just to make a website look beautiful but to create a convenient, intuitive, and effective product for users.</p>
                     <p className={s.germany}>
                         <BsGeo color='red'/>
                         Germany</p>
