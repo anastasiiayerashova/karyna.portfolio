@@ -1,52 +1,107 @@
-.container {
-  padding: 40px 20px;
-  margin-top: 80px;
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+
+  .title {
+    padding-left: 40px;
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
+
+  .content_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .workflow_img {
+    display: block;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .workflow_img.loaded {
+    opacity: 1;
+  }
+
+  .text_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text_container {
+    background-color: var(--gray);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .text_container p {
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.64;
+    letter-spacing: 0.01em;
+  }
 }
 
-.title {
-  padding-left: 80px;
-  padding-bottom: 70px;
-  font-size: 28px;
-}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
 
-.content_wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
+  .title {
+    padding-left: 80px;
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
 
-.workflow_img {
-  display: block;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
+  .content_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-.workflow_img.loaded {
-  opacity: 1;
-}
+  .workflow_img {
+    display: block;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
 
-.text_wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  .workflow_img.loaded {
+    opacity: 1;
+  }
 
-.text_container {
-  background-color: var(--gray);
-  border-radius: 10px;
-  padding: 40px 30px;
-  text-align: center;
-}
+  .text_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.text_container p {
-  font-family: 'Inter', sans-serif;
-  color: var(--white);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.64;
-  letter-spacing: 0.01em;
+  .text_container {
+    background-color: var(--gray);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .text_container p {
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.64;
+    letter-spacing: 0.01em;
+  }
 }
 
 @media screen and (min-width: 1280px) {
