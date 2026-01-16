@@ -6,13 +6,24 @@
   .hero_container {
     position: relative;
     min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* BLUR BACKGROUND */
+  .hero_container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-image: url('/public/images/hero2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    filter: blur(4px);
+    transform: scale(1.1);
+    z-index: 0;
   }
 
+  /* GRADIENT OVERLAY */
   .hero_container::before {
     content: '';
     position: absolute;
@@ -27,6 +38,7 @@
     z-index: 1;
   }
 
+  /* CONTENT */
   .hero_content_wrap {
     padding: 0 20px;
     height: 100vh;
