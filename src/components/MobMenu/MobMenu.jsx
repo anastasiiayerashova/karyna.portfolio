@@ -36,7 +36,7 @@ const MobMenu = ({ isOpen, onClose }) => {
 
       <div className={`${s.menu} ${isOpen ? s.open : ''}`}>
         <button className={s.close} onClick={onClose}>
-          <RxCross1 size={22} />
+          <RxCross1 size={22} color='#a45933' />
         </button>
 
         <nav className={s.links} ref={linksRef}>
