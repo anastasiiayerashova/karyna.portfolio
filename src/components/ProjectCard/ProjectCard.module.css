@@ -1,76 +1,155 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@media screen and (max-width: 767px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.21979;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 38px 26px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    max-width: 790px;
+  }
+
+  .case {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.21979;
+    letter-spacing: 0.04em;
+    color: var(--white);
+  }
+
+  .case span {
+    font-size: 40px;
+    padding-left: 10px;
+  }
+
+  .description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.64;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    max-width: 945px;
+  }
+
+  .gallery {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.desc {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  align-items: flex-end;
-  justify-content: space-between;
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-.title {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.21979;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  font-family: 'Montserrat', sans-serif;
-  padding: 38px 26px;
-  background-color: var(--gray);
-  border-radius: 10px;
-  max-width: 790px;
-}
+  .desc {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
-.case {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 128px;
-  line-height: 1.21979;
-  letter-spacing: 0.04em;
-  color: var(--white);
-}
+  .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.21979;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 38px 26px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    max-width: 790px;
+  }
 
-.case span {
-  font-size: 80px;
-  padding-left: 10px;
-}
+  .case {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 1.21979;
+    letter-spacing: 0.04em;
+    color: var(--white);
+  }
 
-.description {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.64;
-  letter-spacing: 0.01em;
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  padding: 40px 20px;
-  background-color: var(--gray);
-  border-radius: 10px;
-  max-width: 945px;
-}
+  .case span {
+    font-size: 80px;
+    padding-left: 10px;
+  }
 
-.gallery {
-  margin-top: 20px;
-  margin-bottom: 80px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
+  .description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.64;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    max-width: 945px;
+  }
 
-.image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
+  .gallery {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 1280px) {
