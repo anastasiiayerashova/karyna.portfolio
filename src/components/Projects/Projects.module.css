@@ -1,12 +1,27 @@
-.container {
-  padding: 40px 20px;
-  margin-top: 80px;
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+
+  .title {
+    padding-left: 40px;
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
 }
 
-.title {
-  padding-left: 80px;
-  padding-bottom: 70px;
-  font-size: 28px;
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+
+  .title {
+    padding-left: 80px;
+    padding-bottom: 70px;
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
