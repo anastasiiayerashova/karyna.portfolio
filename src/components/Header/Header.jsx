@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import MobMenu from '../MobMenu/MobMenu.jsx'
 import { RxHamburgerMenu } from "react-icons/rx"
+import StaggeredMenu from '../../component/StaggeredMenu'
+
+const menuItems = [
+  { label: 'About me', link: '/about' },
+  { label: 'Workflow', link: '/workflow' },
+  { label: 'Projects', link: '/projects' },
+  { label: 'Get in touch', link: '/contact' },
+]
 
 const Header = () => {
 
@@ -21,11 +29,24 @@ const Header = () => {
                     <li><Link to='/contact'>Get in touch</Link></li>
                 </ul>
                 {/* Mobile burger */}
-                <button type='button' className={s.burger} onClick={toggleMenu}>
+                {/* <button type='button' className={s.burger} onClick={toggleMenu}>
                     <RxHamburgerMenu size={26} />
-                </button>
+                </button> */}
+
+                <div className={s.mobileMenu}>
+                    <StaggeredMenu
+          position="right"
+          items={menuItems}
+          accentColor="#a45933"
+          menuButtonColor="#fff"
+          openMenuButtonColor="#a45933"
+          displayItemNumbering={false}
+          closeOnClickAway
+        />
+                </div>
             </div>
-            <MobMenu isOpen={isMenuOpen} onClose={toggleMenu} />
+            {/* <MobMenu isOpen={isMenuOpen} onClose={toggleMenu} /> */}
+            
         </>
 
     )
