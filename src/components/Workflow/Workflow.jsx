@@ -1,6 +1,7 @@
 import s from './Workflow.module.css'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 
 const fromLeft = {
   hidden: {
@@ -20,6 +21,16 @@ const fromLeft = {
 const Workflow = () => {
 
     const [loaded, setLoaded] = useState(false)
+    const textRef = useRef(null)
+
+  useEffect(() => {
+    gsap.from(textRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+    })
+  }, [])
 
     return (
         <section className={s.container}>
@@ -31,13 +42,13 @@ const Workflow = () => {
                 </div>
                 <div className={s.text_wrap}>
                     <div className={s.text_container}>
-                        <p>
+                        <p ref={textRef}>
                             Analysis &amp; Research: Studying the niche, competitors, and target audience; defining project goals.<br />
                             Idea &amp; Concept: Developing visual style, color palette and UI components.
                         </p>
                     </div>
                     <div className={s.text_container}>
-                        <p>
+                        <p ref={textRef}>
                             UX Design: Creating information architecture and page prototypes.<br />
                             UI Design: Finalizing visual style, adding<br />
                             graphics and interactive elements.
