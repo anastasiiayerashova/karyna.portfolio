@@ -30,8 +30,8 @@ const Contact = () => {
             <div className={s.contact}>
                 <div className={s.left_part}>
                     <div className={s.images}>
-                        <img alt='Telegram' src='/images/contact1.png'/>
-                        <img alt='Instagram' src='/images/contact2.png'/>
+                        <img width='212' height='212' alt='Telegram' src='/images/contact1.png'/>
+                        <img width='212' height='212' alt='Instagram' src='/images/contact2.png'/>
                     </div>
 
                     <div className={s.text_wrap}>
