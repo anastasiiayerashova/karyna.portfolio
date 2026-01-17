@@ -19,6 +19,30 @@ const fromLeft = {
   },
 };
 
+const listVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+}
+
 const Contact = () => {
     return (
         <section className={s.container}>
@@ -36,31 +60,31 @@ const Contact = () => {
 
                     <div className={s.text_wrap}>
                         <p className={s.text_title}>Subscribe To<br/> My Social Media</p>
-                        <ul className={s.list}>
-                            <li className={s.list_item}>Instagram account:
+                        <motion.ul className={s.list} variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+                            <motion.li variants={itemVariants} className={s.list_item}>Instagram account:
                                 <img alt='Instagram' src='/icons/instagram.svg'/>
-                            </li>
-                            <li className={s.list_item}>Telegram account:
+                            </motion.li>
+                            <motion.li variants={itemVariants} className={s.list_item}>Telegram account:
                                 <img alt='Telegram' src='/icons/telegram.svg'/>
-                            </li>
-                            <li className={s.list_item}>Behance account:
+                            </motion.li>
+                            <motion.li variants={itemVariants} className={s.list_item}>Behance account:
                                 <img alt='Behance' src='/icons/behance (1).svg'/>
-                            </li>
-                            <li className={s.list_item}>WhatsApp account:
+                            </motion.li>
+                            <motion.li variants={itemVariants} className={s.list_item}>WhatsApp account:
                                 <img alt='Whatsapp' src='/icons/whatsapp.svg'/>
-                            </li>
-                        </ul>
-                        <ul className={s.add_data}>
-                            <li className={s.add_data_item}>
+                            </motion.li>
+                        </motion.ul>
+                        <motion.ul className={s.add_data} variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+                            <motion.li variants={itemVariants} className={s.add_data_item}>
                                 <LuPhone/>
-                                +380661830828</li>
-                            <li className={s.add_data_item}>
+                                +380661830828</motion.li>
+                            <motion.li variants={itemVariants} className={s.add_data_item}>
                                 <img src='/icons/gmail.svg' alt=''/>
-                                designfernis1@gmail.com</li>
-                            <li className={s.add_data_item}>
+                                designfernis1@gmail.com</motion.li>
+                            <motion.li variants={itemVariants} className={s.add_data_item}>
                                 <BsGeo color='red'/>
-                                Germany</li>
-                        </ul>
+                                Germany</motion.li>
+                        </motion.ul>
                     </div>
 
                 </div>
