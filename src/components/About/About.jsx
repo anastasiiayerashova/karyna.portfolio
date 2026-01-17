@@ -3,6 +3,7 @@ import { BsGeo } from "react-icons/bs"
 import { motion } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import PixelTransition from '../../component/PixelTransition'
 
 const listVariants = {
   hidden: {},
@@ -70,7 +71,36 @@ const About = () => {
                         Germany</p>
                 </div>
                 <div className={s.about_desc_img_wrap}>
-                    <img width='728' height='680' src='/images/about1.png' alt='Karyna Yurkova' className={`${s.about_img} ${loaded ? s.loaded : ''}`} onLoad={() => setLoaded(true)}/>
+                    <PixelTransition
+                        firstContent={
+                            <img
+                                src='/images/about1.png'
+                                width='720'
+                                height='680'
+                                className={`${s.about_img} ${loaded ? s.loaded : ''}`} onLoad={() => setLoaded(true)}
+                                alt="Karyna Yurkova"
+                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                            />
+                        }
+                        secondContent={
+                            <div
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    display: "grid",
+                                    placeItems: "center",
+                                    backgroundColor: "#111"
+                                }}
+                            >
+                                <p style={{ fontWeight: 900, fontSize: "3rem", color: "#a45933" }}>I design interfaces that feel intuitive, not complicated</p>
+                            </div>
+                        }
+                        gridSize={12}
+                        pixelColor='#fff'
+                        once={false}
+                        animationStepDuration={0.4}
+                        className="custom-pixel-card"
+                    />
                 </div>
             </div>
 

@@ -419,4 +419,10 @@
     max-width: 340px;
     max-height: 50px;
   }
+
+  .about_desc_img_wrap {
+    flex: 0 0 690px;
+    min-height: 680px;
+    display: flex;
+  }
 }
