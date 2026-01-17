@@ -1,21 +1,33 @@
 import s from './ProjectCard.module.css'
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 
 const ProjectCard = ({ project }) => {
     const { title, caseNumber, description, images } = project
+    const textRef = useRef(null)
+
+  useEffect(() => {
+    gsap.from(textRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+    })
+  }, [])
     
     return (
         <article className={s.card}>
 
             {/* Header */}
             <div className={s.header}>
-                <h3 className={s.title}>{title}</h3>
+                <h3 ref={textRef} className={s.title}>{title}</h3>
                 
             </div>
 
             {/* Description */}
             <div className={s.desc}>
-                <p className={s.description}>{description}</p>
-                <span className={s.case}>{caseNumber}<span>Case</span></span>
+                <p ref={textRef} className={s.description}>{description}</p>
+                <span ref={textRef} className={s.case}>{caseNumber}<span>Case</span></span>
             </div>
             
 
