@@ -1,6 +1,8 @@
 import s from './ProjectCard.module.css'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import TrueFocus from '../../component/TrueFocus.jsx'
+
 
 const ProjectCard = ({ project }) => {
     const { title, caseNumber, description, images } = project
@@ -27,7 +29,15 @@ const ProjectCard = ({ project }) => {
             {/* Description */}
             <div className={s.desc}>
                 <p ref={textRef} className={s.description}>{description}</p>
-                <span ref={textRef} className={s.case}>{caseNumber}<span>Case</span></span>
+                <div className={s.case}>
+    <TrueFocus
+      sentence={`${caseNumber} Case`}
+      blurAmount={4}
+      animationDuration={1.4}
+      pauseBetweenAnimations={0.8}
+      manualMode={false}
+    />
+  </div>
             </div>
             
 
