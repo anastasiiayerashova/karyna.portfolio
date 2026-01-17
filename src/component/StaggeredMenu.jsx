@@ -4,7 +4,7 @@ import './StaggeredMenu.css';
 
 export const StaggeredMenu = ({
   position = 'right',
-  colors = ['#B19EEF', '#5227FF'],
+  colors = ['#fff', '#a45933'],
   items = [],
   socialItems = [],
   displaySocials = true,
