@@ -125,7 +125,7 @@ const About = () => {
                 <li className={s.tools_item}>
                     <div className={s.tools_wrap}>
                         <p className={s.tools_text}>Languages:</p>
-                        <img className={s.lang} alt='' src='/public/images/languages.png'/>
+                        <img className={s.lang} alt='' src='/images/languages.png'/>
                     </div>
                 </li>
             </ul>
