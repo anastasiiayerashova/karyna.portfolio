@@ -18,7 +18,14 @@ const TrueFocus = ({
   const containerRef = useRef(null);
   const wordRefs = useRef([]);
   const [focusRect, setFocusRect] = useState({ x: 0, y: 0, width: 0, height: 0 });
-
+    
+  useEffect(() => {
+    return () => {
+      setCurrentIndex(-1)
+      setFocusRect({ x: 0, y: 0, width: 0, height: 0 })
+    }
+  }, [])
+    
   useEffect(() => {
     if (!manualMode) {
       const interval = setInterval(
