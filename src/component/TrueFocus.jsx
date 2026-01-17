@@ -92,15 +92,17 @@ const TrueFocus = ({
 
       <motion.div
         className="focus-frame"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true}}
         animate={{
-          x: focusRect.x,
-          y: focusRect.y,
-          width: focusRect.width,
-          height: focusRect.height,
-          opacity: currentIndex >= 0 ? 1 : 0
+            x: focusRect.x,
+            y: focusRect.y,
+            width: focusRect.width,
+            height: focusRect.height,
         }}
         transition={{
-          duration: animationDuration
+            duration: animationDuration
         }}
         style={{
           '--border-color': borderColor,
